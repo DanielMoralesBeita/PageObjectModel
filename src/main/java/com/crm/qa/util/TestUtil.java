@@ -21,7 +21,7 @@ public class TestUtil extends TestBase{
 	public static long IMPLICIT_WAIT = 20;
 	//String currentDir = System.getProperty("user.dir");
 		 String current = new java.io.File( "." ).getCanonicalPath();
-        System.out.println("Current dir:"+current);
+     //   System.out.println("Current dir:"+current);
  //String currentDir = System.getProperty("user.dir");
 	public static String TESTDATA_SHEET_PATH = current
 			+ "/FreeCRMTest/src/main/java/com/crm/qa/testdata/FreeCrmTestData.xlsx";
@@ -64,11 +64,11 @@ public class TestUtil extends TestBase{
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		//String currentDir = System.getProperty("user.dir");
-		 String current = new java.io.File( "." ).getCanonicalPath();
+		 String current2 = new java.io.File( "." ).getCanonicalPath();
         System.out.println("Current dir:"+current);
  String currentDir = System.getProperty("user.dir");
         System.out.println("Current dir using System:" +currentDir);
-		FileUtils.copyFile(scrFile, new File(current + "/screenshots/" + System.currentTimeMillis() + ".png"));
+		FileUtils.copyFile(scrFile, new File(current2 + "/screenshots/" + System.currentTimeMillis() + ".png"));
 		
 		}
 	
