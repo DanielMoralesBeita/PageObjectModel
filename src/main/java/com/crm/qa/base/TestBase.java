@@ -25,8 +25,12 @@ public class TestBase {
 	
 	public TestBase(){
 		try {
+			 String current = new java.io.File( "." ).getCanonicalPath();
+        System.out.println("Current dir:"+current);
+ String currentDir = System.getProperty("user.dir");
+        System.out.println("Current dir using System:" +currentDir);
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/crm"
+			FileInputStream ip = new FileInputStream(current+ "/src/main/java/com/crm"
 					+ "/qa/config/config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
