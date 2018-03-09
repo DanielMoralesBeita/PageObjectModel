@@ -20,7 +20,7 @@ public class TestUtil extends TestBase{
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 20;
 	//String currentDir = System.getProperty("user.dir");
-	//public static	 String current = new java.io.File( "." ).getCanonicalPath();
+		 String current = new java.io.File( "." ).getCanonicalPath();
      //   System.out.println("Current dir:"+current);
  //String currentDir = System.getProperty("user.dir");
 	public static String TESTDATA_SHEET_PATH = "/FreeCRMTest/src/main/java/com/crm/qa/testdata/FreeCrmTestData.xlsx";
