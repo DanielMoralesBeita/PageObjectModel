@@ -19,8 +19,11 @@ public class TestUtil extends TestBase{
 	
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 20;
-	
-	public static String TESTDATA_SHEET_PATH = "/Users/naveenkhunteta/Documents/workspace"
+	String currentDir = System.getProperty("user.dir");
+		 String current = new java.io.File( "." ).getCanonicalPath();
+        System.out.println("Current dir:"+current);
+ String currentDir = System.getProperty("user.dir");
+	public static String TESTDATA_SHEET_PATH = currentDir
 			+ "/FreeCRMTest/src/main/java/com/crm/qa/testdata/FreeCrmTestData.xlsx";
 	
 	static Workbook book;
@@ -61,8 +64,11 @@ public class TestUtil extends TestBase{
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
-		
-		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
+		 String current = new java.io.File( "." ).getCanonicalPath();
+        System.out.println("Current dir:"+current);
+ String currentDir = System.getProperty("user.dir");
+        System.out.println("Current dir using System:" +currentDir);
+		FileUtils.copyFile(scrFile, new File(current + "/screenshots/" + System.currentTimeMillis() + ".png"));
 		
 		}
 	
